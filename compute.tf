@@ -10,6 +10,7 @@ resource "google_compute_instance_template" "template" {
 
   network_interface {
     network = google_compute_network.vpc.id
+    subnetwork = google_compute_subnetwork.subnet.id
     access_config {}
   }
 
@@ -93,4 +94,3 @@ resource "google_compute_global_forwarding_rule" "forwarding_rule" {
   port_range = "80"
   ip_address = google_compute_global_address.lb_ip.address
 }
-
