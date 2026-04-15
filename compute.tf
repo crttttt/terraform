@@ -93,3 +93,4 @@ resource "google_compute_global_forwarding_rule" "forwarding_rule" {
   port_range = "80"
   ip_address = google_compute_global_address.lb_ip.address
 }
+
